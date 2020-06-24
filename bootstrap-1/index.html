@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb" class="clearfix">
+        <ol class="breadcrumb float-left w-50">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+        <div class="float-right">
+          <button class="btn btn-success">Login</button>
+          <button class="btn btn-danger">Logout</button>
+        </div>
+      </nav>
+
+      <div>
+        <hr />
+      </div>
+    </div>
+
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide carousel-height"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item image-carousel active">
+          <img
+            class="d-block w-100"
+            src="https://images.unsplash.com/photo-1592917907394-e016cbbb6c5b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+            alt="First slide"
+          />
+        </div>
+        <div class="carousel-item image-carousel">
+          <img
+            class="d-block w-100"
+            src="https://images.unsplash.com/photo-1592861394788-2935b53de467?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
+            alt="Second slide"
+          />
+        </div>
+        <div class="carousel-item image-carousel">
+          <img
+            class="d-block w-100"
+            src="https://images.unsplash.com/photo-1592880476212-6ba3083f07ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+            alt="Third slide"
+          />
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleIndicators"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="accordion mt-5" id="myAccordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button
+                type="button"
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+              >
+                1. What is HTML?
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseOne"
+            class="collapse"
+            aria-labelledby="headingOne"
+            data-parent="#myAccordion"
+          >
+            <div class="card-body">
+              <p>
+                HTML stands for HyperText Markup Language. HTML is the standard
+                markup language for describing the structure of web pages.
+                <a
+                  href="https://www.tutorialrepublic.com/html-tutorial/"
+                  target="_blank"
+                  >Learn more.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button
+                type="button"
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+              >
+                2. What is Bootstrap?
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseTwo"
+            class="collapse show"
+            aria-labelledby="headingTwo"
+            data-parent="#myAccordion"
+          >
+            <div class="card-body">
+              <p>
+                Bootstrap is a sleek, intuitive, and powerful front-end
+                framework for faster and easier web development. It is a
+                collection of CSS and HTML conventions.
+                <a
+                  href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/"
+                  target="_blank"
+                  >Learn more.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button
+                type="button"
+                class="btn btn-link collapsed"
+                data-toggle="collapse"
+                data-target="#collapseThree"
+              >
+                3. What is CSS?
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapseThree"
+            class="collapse"
+            aria-labelledby="headingThree"
+            data-parent="#myAccordion"
+          >
+            <div class="card-body">
+              <p>
+                CSS stands for Cascading Style Sheet. CSS allows you to specify
+                various style properties for a given HTML element such as
+                colors, backgrounds, fonts etc.
+                <a
+                  href="https://www.tutorialrepublic.com/css-tutorial/"
+                  target="_blank"
+                  >Learn more.</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

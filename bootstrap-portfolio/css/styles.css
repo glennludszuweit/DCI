@@ -1,0 +1,53 @@
+.header {
+  background-color: #010228;
+  color: #fff;
+  height: 100vh;
+}
+
+#navbar {
+  z-index: 10000;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #aca9a9 !important;
+}
+
+.about-image {
+  width: 100%;
+}
+
+.bg-blue {
+  background-color: #010228;
+  color: #fff;
+}
+
+.skills-image {
+  height: 150px;
+}
+
+.card {
+  background-color: #010228;
+  color: #fff;
+}
+
+.contact-container {
+  width: 60%;
+  margin: auto;
+}
+
+.footer {
+  background: #aca9a9;
+  color: #010228;
+}
+
+.external-links {
+  height: 45px;
+}
+
+.external-links-container {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}

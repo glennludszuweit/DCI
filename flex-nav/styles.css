@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=IBM+Plex+Mono&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Mono", monospace;
+  color: #e4e4e4;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: green;
+}
+
+.navigation .nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.navigation .nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation .nav-links .nav-item {
+  padding: 1.5rem;
+}
+
+@media only screen and (min-width: 769px) {
+  .navigation {
+    flex-direction: row;
+  }
+
+  .navigation .nav-links {
+    flex-direction: row;
+  }
+}

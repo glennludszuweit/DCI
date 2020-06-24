@@ -1,0 +1,13 @@
+.bg-animate {
+  animation-name: firstKey;
+  animation-duration: 5s;
+}
+
+@keyframes firstKey {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}

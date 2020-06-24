@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  font-size: 2rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50rem;
+  flex-grow: 1;
+}
+
+.action {
+  background-color: dodgerblue;
+}
+
+.thriller {
+  background-color: yellow;
+  flex-grow: 10;
+}
+
+.comedy {
+  background-color: green;
+  flex-grow: 10;
+}
+
+.horror {
+  background-color: orange;
+}
+
+.drama {
+  background-color: gray;
+}
+
+.romance {
+  background-color: red;
+}
