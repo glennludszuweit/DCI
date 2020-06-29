@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      form > * {
+        margin: 10px 0;
+      }
+      input {
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="http://hktr.de:9998/destination" method="GET">
+      <div>
+        <label>Full name:</label>
+        <input type="text" placeholder="Full name" />
+      </div>
+
+      <div>
+        <label>Birthdate:</label>
+        <input min="1950-01-01" max="2020-06-29" placeholder="yyyy/mm/dd" />
+      </div>
+
+      <div>
+        <label>Favourite color:</label>
+        <input type="color" value="#e66465" />
+      </div>
+
+      <div>
+        <div>Hobbies:</div>
+        <div>
+          <input type="checkbox" id="scales" name="scales" />
+          <label for="scales">Football</label>
+        </div>
+        <div>
+          <input type="checkbox" id="horns" name="horns" />
+          <label for="horns">Drinking beer</label>
+        </div>
+        <div>
+          <input type="checkbox" id="horns" name="horns" />
+          <label for="horns">Coding</label>
+        </div>
+        <div>
+          <input type="checkbox" id="horns" name="horns" />
+          <label for="horns">Sleeping</label>
+        </div>
+      </div>
+
+      <div>
+        <textarea cols="30" rows="10" placeholder="Message..."></textarea>
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <input type="email" placeholder="Email" />
+      </div>
+
+      <div>
+        <label>Password:</label>
+        <input type="password" placeholder="Password" />
+      </div>
+
+      <div>
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </body>
+</html>
