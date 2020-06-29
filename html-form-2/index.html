@@ -5,64 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <style>
-      form > * {
+      body {
+        width: 800px;
+        margin: 0 auto;
+      }
+      div {
         margin: 10px 0;
       }
       input {
         padding: 5px;
+        margin-left: 20px;
+      }
+      legend {
+        font-weight: 600;
+        padding: 3px;
+      }
+      fieldset {
+        margin: 15px 0;
+      }
+      button {
+        float: right;
+        padding: 5px 15px;
       }
     </style>
   </head>
   <body>
+    <h1>HTML Form</h1>
     <form action="http://hktr.de:9998/destination" method="GET">
-      <div>
-        <label>Full name:</label>
-        <input type="text" placeholder="Full name" />
-      </div>
-
-      <div>
-        <label>Birthdate:</label>
-        <input min="1950-01-01" max="2020-06-29" placeholder="yyyy/mm/dd" />
-      </div>
-
-      <div>
-        <label>Favourite color:</label>
-        <input type="color" value="#e66465" />
-      </div>
-
-      <div>
-        <div>Hobbies:</div>
+      <fieldset>
+        <legend>Bio</legend>
         <div>
-          <input type="checkbox" id="scales" name="scales" />
-          <label for="scales">Football</label>
+          <label>Full name:</label>
+          <input type="text" placeholder="Full name" />
         </div>
         <div>
-          <input type="checkbox" id="horns" name="horns" />
-          <label for="horns">Drinking beer</label>
+          <label>Birthdate:</label>
+          <input min="1950-01-01" max="2020-06-29" placeholder="yyyy/mm/dd" />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Gender</legend>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Hobbies</legend>
+        <div>
+          <input type="checkbox" />
+          <label>Football</label>
         </div>
         <div>
-          <input type="checkbox" id="horns" name="horns" />
-          <label for="horns">Coding</label>
+          <input type="checkbox" />
+          <label>Drinking beer</label>
         </div>
         <div>
-          <input type="checkbox" id="horns" name="horns" />
-          <label for="horns">Sleeping</label>
+          <input type="checkbox" />
+          <label>Coding</label>
         </div>
-      </div>
+        <div>
+          <input type="checkbox" />
+          <label>Sleeping</label>
+        </div>
+      </fieldset>
 
-      <div>
-        <textarea cols="30" rows="10" placeholder="Message..."></textarea>
-      </div>
+      <fieldset>
+        <legend>Favourites</legend>
+        <div>
+          <label>Favourite color:</label>
+          <input type="color" value="#e66465" />
+        </div>
+        <div>
+          <label for="ice-cream-choice">Favourite ice cream:</label>
+          <input
+            list="ice-cream-flavors"
+            id="ice-cream-choice"
+            name="ice-cream-choice"
+          />
+          <datalist id="ice-cream-flavors">
+            <option value="Chocolate"> </option>
+            <option value="Coconut"> </option>
+            <option value="Mint"> </option>
+            <option value="Strawberry"> </option>
+            <option value="Vanilla"> </option>
+          </datalist>
+        </div>
+        <div>
+          <label for="file">In Hate:</label>
+          <progress id="file" max="100" value="70"> 70% </progress>
+        </div>
+        <div>
+          <label for="fuel">Fuel level:</label>
+          <meter
+            id="fuel"
+            min="0"
+            max="100"
+            low="33"
+            high="66"
+            optimum="80"
+            value="50"
+          >
+            at 50/100
+          </meter>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Message</legend>
+        <div>
+          <textarea cols="50" rows="10" placeholder="Message..."></textarea>
+        </div>
+      </fieldset>
 
-      <div>
-        <label>Email:</label>
-        <input type="email" placeholder="Email" />
-      </div>
-
-      <div>
-        <label>Password:</label>
-        <input type="password" placeholder="Password" />
-      </div>
+      <fieldset>
+        <legend>Credentials</legend>
+        <div>
+          <label>Email:</label>
+          <input type="email" placeholder="Email" />
+        </div>
+        <div>
+          <label>Mobile:</label>
+          <input type="number" min="11" max="11" />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" placeholder="Password" />
+        </div>
+      </fieldset>
 
       <div>
         <button type="submit">Send</button>
