@@ -1,0 +1,18 @@
+@use '../extends/bg-colors.scss';
+@use '../extends/font-colors.scss';
+
+header {
+  min-height: 10vh;
+  background: orange;
+
+  .green {
+    width: 100%;
+    @extend %forthtiary-bg;
+    @extend %secondary-font;
+  }
+
+  .yellow {
+    width: 100%;
+    @extend %primary-button;
+  }
+}

@@ -1,0 +1,10 @@
+@use '../extends/colors.scss';
+
+footer {
+  @extend %tritiary-bg;
+  position: relative;
+  padding: 25px;
+  p {
+    text-align: center;
+  }
+}

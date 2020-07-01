@@ -1,0 +1,25 @@
+@use '../extends/typography.scss';
+@use '../extends/colors.scss';
+
+form {
+  @extend %font-family;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+
+  input {
+    padding: 10px;
+    margin: 15px 0;
+  }
+
+  button {
+    width: 50%;
+    align-self: flex-end;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    @extend %primary-bg;
+    @extend %secondary-color;
+    @extend %font-general-size;
+  }
+}
