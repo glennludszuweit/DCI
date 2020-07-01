@@ -1,0 +1,35 @@
+@use '../extends/bg-colors';
+@use '../extends/font-colors';
+
+header {
+  text-align: center;
+
+  .title {
+    @extend %primary-bg;
+    height: 200px;
+    padding: 50px 0 100px;
+    // border-bottom-right-radius: 5px;
+    // border-bottom-left-radius: 5px;
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-weight: 300;
+    }
+  }
+
+  .nav {
+    @extend %secondary-bg;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 15px 0;
+
+    a {
+      @extend %font-color-primary;
+      padding: 0 10px;
+    }
+    a:hover {
+      @extend %font-color-tertiary;
+    }
+  }
+}

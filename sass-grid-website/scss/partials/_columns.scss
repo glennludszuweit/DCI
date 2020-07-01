@@ -1,0 +1,15 @@
+.columns {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .column-section {
+    padding: 25px;
+
+    h2 {
+      padding: 10px 0;
+      font-size: 25px;
+      font-weight: 200;
+    }
+  }
+}

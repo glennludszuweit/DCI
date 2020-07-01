@@ -1,0 +1,25 @@
+@use '../extends/buttons';
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+
+  [class*='card-'] {
+    padding: 25px 70px;
+    margin: 70px 10px;
+    border-radius: 5px;
+  }
+
+  .card-1 {
+    @extend %button-first;
+  }
+  .card-2 {
+    @extend %button-second;
+  }
+  .card-3 {
+    @extend %button-third;
+  }
+  .card-4 {
+    @extend %button-fourth;
+  }
+}

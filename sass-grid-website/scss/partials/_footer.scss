@@ -1,0 +1,7 @@
+@use '../extends/bg-colors';
+
+footer {
+  @extend %primary-bg;
+  text-align: center;
+  padding: 15px 0;
+}

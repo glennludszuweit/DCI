@@ -1,0 +1,21 @@
+@use '../extends/font-colors';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  line-height: 25px;
+  word-spacing: 5px;
+  max-width: 1200px;
+  margin: auto;
+
+  @extend %font-color-primary;
+}
+
+a {
+  text-decoration: none;
+}
