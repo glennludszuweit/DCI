@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0e1111;
+  color: #f8f8f8;
+}
+
+header {
+  background: #353839;
+}
+
+/*# sourceMappingURL=styles.css.map */
