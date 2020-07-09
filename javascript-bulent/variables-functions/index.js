@@ -23,6 +23,21 @@ myNum = myFirstNum;
 console.log(myNum);
 console.log(myFirstNum);
 
-myFirstNum = 'abc';
+myFirstNum = '123';
 console.log(myNum);
+console.log(typeof myFirstNum);
+
+myFirstNum = myFirstNum + 5;
+myFirstNum += 5;
+myFirstNum += 's';
+myNum = myNum + 5;
+myNum += 5;
+myNum += 'b';
+
 console.log(myFirstNum);
+console.log(myNum);
+
+function consoleLogger(text) {
+  console.log(text);
+}
+consoleLogger('Hallo');
