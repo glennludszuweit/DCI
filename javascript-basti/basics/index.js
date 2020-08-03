@@ -162,3 +162,23 @@ var cloudy      = false;
 if ( temperature > 30 && cloudy === false ){
     console.log('good weather');
 }
+
+//small exercise
+var error = 400;
+switch (error) {
+    case 200:
+        console.log('OK');
+        break;
+    case 404:
+        console.log('File not Found');
+        break;
+    case 400:
+        console.log('Access Denied');
+        break;
+    case 500:
+        console.log('Internal Server Error');
+        break;
+    default:
+        console.log('Unknown Error');
+        break;
+}
