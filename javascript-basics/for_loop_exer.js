@@ -1,11 +1,12 @@
-//GLOBAL letIABLES
-let starCount = 7;
+//------------------------------------------
+//CHANGE starCount value to change all tree size
+let starCount = 6;
+//------------------------------------------
 
 //EXERCISE 1
 for (let i = '*'; i.length <= starCount; i += '*') {
   console.log(i);
 }
-console.log('------------------------');
 
 //EXERCISE 2
 for (let i = 0; i < starCount; i++) {
@@ -20,7 +21,6 @@ for (let i = 0; i < starCount; i++) {
   star = spaceLeft + star;
   console.log(star);
 }
-console.log('------------------------');
 
 //EXERCISE 3
 for (let i = 0; i < starCount; i++) {
@@ -35,7 +35,6 @@ for (let i = 0; i < starCount; i++) {
   star = spaceLeft + star;
   console.log(star);
 }
-console.log('------------------------');
 
 //EXERCISE 4
 for (let i = 0; i < starCount; i++) {
@@ -50,6 +49,7 @@ for (let i = 0; i < starCount; i++) {
   star = spaceLeft + star;
   console.log(star);
 }
+
 for (let i = 0; i < 2; i++) {
   let totalStar = 1;
   let totalSpace = starCount - 2;
@@ -57,4 +57,3 @@ for (let i = 0; i < 2; i++) {
   let space = ' ';
   console.log(space.repeat(totalSpace) + star.repeat(totalStar));
 }
-console.log('------------------------');
