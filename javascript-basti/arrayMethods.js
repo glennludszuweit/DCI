@@ -6,8 +6,7 @@ function addOne(theParams, secondParams) {
 }
 addOne(counter, numVal);
 
-///*****************************************.reduce*********
-
+///*****************************************.reduce()*********
 let classGrades = [2, 1, 3, 4, 4, 6, 1, 3, 5];
 let totalGrade = classGrades.reduce(addGrades, 0);
  
@@ -17,18 +16,13 @@ function addGrades(gradeTotal, value) {
 
 console.log(totalGrade / classGrades.length)
 
-//function addGrades(aveGrade) {
-//  let students = classGrades.length;
-//  let totalGrade = 0;
-  // for ( let i = 0; i < students; i++ ) {
-  //  totalGrade += classGrade[i];
-  // }
-//  return aveGrade;
-//}
-//addGrades(classGrades)
+let newNames = ['John', 'Jane', 'Sam', 'Bob', 'Alice'];
+let newMessage = newNames.reduce((greetingMessage, name) => {
+  return greetingMessage + name + ', ';
+}, 'Welcome ')
+console.log(newMessage + 'to DCI');
 
-///*****************************************.forEach*********
-
+///*****************************************.forEach()*********
 let classNames = ['Daniel', 'Danylo', 'Glenn', 'Basti'];
 classNames.forEach((name) => {
   console.log(`Hi ${name}`);
@@ -41,7 +35,26 @@ myNums.forEach((average) => {
 })
 console.log(sum / myNums.length)
 
-///*****************************************.map*********
+let allNames = ['John', 'Jane', 'Sam', 'Bob', 'Alice'];
+let message = 'Welcome ';
+allNames.forEach((name) => {
+  message = message + name + ' ';
+})
+console.log(message + ' to DCI');
+
+///*****************************************.map()*********
+let allPrices = [21.3, 55.45, 34.5, 10.02, 9.99];
+let newPrices = allPrices.map((prices) => {
+  return Math.ceil((prices / 1.19) * 1.16) - .05;
+})
+console.log(newPrices)
+
+let allGrades = [2,3,4,6,4,5,3,2,3];
+allGrades.map((grade) => {
+  return grade + 1;
+  console.log(grade)
+})
+
 
 
 
