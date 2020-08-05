@@ -123,6 +123,18 @@ allGrades.map((grade) => {
 })
 
 
+let sampleString = 'hey samuel, how are you';
+let splited = sampleString.split(' ');
+console.log(splited);
+console.log(splited.join(' '));
+
+let numStr = '123456789'
+let realNumArray = numStr.split('')
+realNumArray.map((numbers) => {
+  return Number(numbers);
+})
+console.log(realNumArray)
+
 
 
 
