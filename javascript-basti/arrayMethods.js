@@ -131,12 +131,9 @@ console.log(splited.join(' '));
 let numStr = '123456789'
 let realNumArray = numStr.split('')
 realNumArray.map((numbers) => {
-  return Number(numbers);
+  return +numbers;
 })
 console.log(realNumArray)
-
-
-
 
 
 
