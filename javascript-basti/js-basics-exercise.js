@@ -16,7 +16,6 @@ myFunction();
 //easy_01
 function newAddOne(params) {
     let sum = params + 1;
-    console.log(sum);
     return sum;
 }
 newAddOne(5);
@@ -24,7 +23,6 @@ newAddOne(5);
 //easy_02
 function xSum(first, second) {
   let sum = first + second;
-  console.log(sum);
   return sum;
 }
 xSum(5, 7);
@@ -32,7 +30,6 @@ xSum(5, 7);
 //easy_03
 function combineString(first, second) {
     let phrase = first + ' ' + second;
-    console.log(phrase);
     return phrase;
 }
 combineString('Glenn', 'Ludszuweit');
@@ -40,7 +37,6 @@ combineString('Glenn', 'Ludszuweit');
 //easy_04
 function getAverage(num1, num2, num3) {
   let average = (num1 + num2 + num3) / 3;
-  console.log(average);
   return average;
 }
 getAverage(5, 7, 9);
@@ -48,18 +44,16 @@ getAverage(5, 7, 9);
 //easy_05
 function VAT (price) {
     let priceWithVAT = price * 1.16;
-    console.log(priceWithVAT);
     return priceWithVAT;
 }
 VAT(25);
 
 //medium_00
 let stringNums = ['1', '2', '3', '4', '5'];
-let realNums = stringNums.map(convertToNumbers);
-function convertToNumbers(numbers) {
+let convertToNumbers = stringNums.map((numbers) => {
   return Number(numbers);
-}
-console.log(realNums);
+});
+console.log(convertToNumbers);
 
 //medium_01
 let myArray = ['hello', 'second', 'item']
