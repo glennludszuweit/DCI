@@ -34,8 +34,16 @@ let palidrome = (word) => {
 }
 palidrome('Eva, can I see bees in a cave')
 
+//3. - Write a JavaScript function that takes a string as an argument
+//   - Returns the string with letters in alphabetical order.
+//example: 'webmaster' result: 'abeemrstw'
+let sortAlphabetically = (word) => {
+  let sorted = word.split('').sort().join('')
+  return sorted;
+}
+sortAlphabetically('webmaster')
 
-//3. - Write a JavaScript function that accepts a string as a parameter.
+//4. - Write a JavaScript function that accepts a string as a parameter.
 //   - Converts the first letter of each word of the string in upper case.
 //   - Use array and string methods to achieve this.
 //example 'enjoy learning javascript' result: 'Enjoy Learning Javascript'.
@@ -43,7 +51,7 @@ let capitalizeFirstLetter = (word) => {
   let wordArray = word.split(' ');
   let newFirstLetter = wordArray.map((firstLetter) => {
     let capitalLetter = firstLetter[0].toUpperCase();
-    return capitalLetter + firstLetter.slice(1);
+    return capitalLetter + firstLetter.split(firstLetter[0]).join(''); // slice(1)
   })
   return newFirstLetter.join(' ');
 }
