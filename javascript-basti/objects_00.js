@@ -12,8 +12,15 @@ let obj = {
     1, 2, 3, 4, 5
   ]
 }
-console.log(obj.secondValue.secondTwo)
-console.log(obj.thirdValue())
+obj.randomValue1 = 'I am OKAY';
+
+console.log(obj)
+
+//assign Object property to an object
+let obj2 = Object.assign({}, obj);
+obj2.randomValue2 = 'We are not okay';
+delete obj2.randomValue2;
+console.log(obj2)
 
 //Class Objects
 class ValueHolder {
@@ -36,4 +43,49 @@ console.log(Values);
 let Values2 = new ValueHolder('Hello', 'There', 'Dino');
 Values2.consoleLog()
 console.log(Values2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
