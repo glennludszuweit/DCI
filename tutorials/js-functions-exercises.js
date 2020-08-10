@@ -17,8 +17,6 @@ let palidrome = (word) => {
     .split('')
     .reverse()
     .join('')
-    .split(' ')
-    .join('')
     .toLowerCase()
     .replace(/[^a-zA-Z0-9]+/g,'')
   let unreversed = word
@@ -32,7 +30,7 @@ let palidrome = (word) => {
     console.log(`'${word}' - is not a palidrome`);
   }
 }
-palidrome('Eva, can I see bees in a cave')
+palidrome('how are you')
 
 //3. - Write a JavaScript function that takes a string as an argument
 //   - Returns the string with letters in alphabetical order.
