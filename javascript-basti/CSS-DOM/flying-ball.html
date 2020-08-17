@@ -22,9 +22,13 @@
     ball.classList.add('flying-ball');
 
     let y = 0;
+    let moveY = 10;
 
     let fly = () => {
-      y += 1;
+      y += moveY;
+      if (y + 100 > window.innerHeight || y <= 0) {
+        moveY *= -1;
+      }
       ball.style.top = `${y}px`;
     };
 
