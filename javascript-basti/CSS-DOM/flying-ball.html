@@ -21,7 +21,12 @@
     document.body.append(ball);
     ball.classList.add('flying-ball');
 
-    let fly = () => {};
+    let y = 0;
+
+    let fly = () => {
+      y += 1;
+      ball.style.top = `${y}px`;
+    };
 
     setInterval(fly, 16.6);
   </script>
