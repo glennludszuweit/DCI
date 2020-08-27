@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flying ball</title>
   </head>
-  <body></body>
+  <body>
+    <div class="flying-ball"></div>
+  </body>
   <style>
     .flying-ball {
       position: absolute;
-      top: 0;
+      bottom: 0;
       width: 100px;
       height: 100px;
       border-radius: 50px;
@@ -17,9 +19,7 @@
     }
   </style>
   <script>
-    const ball = document.createElement('div');
-    document.body.append(ball);
-    ball.classList.add('flying-ball');
+    const ball = document.querySelector('.flying-ball');
 
     let y = 0;
     let moveY = 10;
