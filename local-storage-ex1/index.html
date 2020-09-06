@@ -4,47 +4,84 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Local Storage</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-
     <script src="./app.js" defer></script>
   </head>
-  <body class="text-center container">
-    <h1 class="p-5">Save to Local Storage</h1>
-
-    <form class="py-5">
-      <div class="row">
-        <div class="col-4">
-          <input type="text" class="form-control" placeholder="Key" />
-        </div>
-        <div class="col-4">
-          <input type="text" class="form-control" placeholder="Value" />
-        </div>
-        <div class="col-3">
-          <input type="text" class="btn btn-primary" value="submit" />
-        </div>
-      </div>
-    </form>
-
-    <table class="table w-100">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Key</th>
-          <th scope="col">Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Sample-key</td>
-          <td>123</td>
-        </tr>
-      </tbody>
-    </table>
+  <body>
+    <h1 id="first-value"></h1>
+    <h1 id="second-value"></h1>
+    <h1 id="third-value"></h1>
   </body>
+
+  <script>
+    /*
+    1. Input Output
+    Write a program that takes in 3 Numbers,
+    store them into localStorage.
+    The next time you vist the page (reload)
+    these numbers should be printed out in the
+    console.
+
+    Bonus: Not in the console make some nice looking
+    html out of it.
+
+    2. When you click at one of those numbers,
+    ask for a new number, and save into localStorage again,
+    in the exact same place, or key.
+
+    Hint: Look at Promises, Fetch
+            (Async functions)
+*/
+
+    // class Program {
+    //   constructor(key, value) {
+    //     this.key = key;
+    //     this.value = value;
+    //   }
+
+    //   set() {
+    //     localStorage.setItem(this.key, JSON.stringify(this.value));
+    //   }
+
+    //   get() {
+    //     let firstValue = document.getElementById('first-value');
+    //     return (firstValue.innerText = localStorage.getItem(this.key));
+    //   }
+    // }
+
+    // let p1 = new Program('Tony', 4);
+    // p1.set();
+    // console.log(p1.get());
+
+    function SET(key, value) {
+      localStorage.setItem(key, JSON.stringify(value));
+    }
+
+    function GET(key) {
+      return JSON.parse(localStorage.getItem(key));
+    }
+
+    const firstValue = document.getElementById('first-value');
+    firstValue.addEventListener('click', () => {
+      let newValue = prompt('enter new value');
+      SET('a', newValue);
+      firstValue.innerText = GET('a');
+    });
+    firstValue.innerText = GET('a') || 1;
+
+    const secondValue = document.getElementById('second-value');
+    secondValue.addEventListener('click', () => {
+      let newValue = prompt('enter new value');
+      SET('b', newValue);
+      secondValue.innerText = GET('b');
+    });
+    secondValue.innerText = GET('b') || 2;
+
+    const thirdValue = document.getElementById('third-value');
+    thirdValue.addEventListener('click', () => {
+      let newValue = prompt('enter new value');
+      SET('c', newValue);
+      thirdValue.innerText = GET('c');
+    });
+    thirdValue.innerText = GET('c') || 3;
+  </script>
 </html>
