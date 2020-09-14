@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock rates</title>
+  </head>
+  <body>
+    <form>
+      <input class="input" type="text" placeholder="Search Stock by Symbol" />
+      <input class="submit" type="submit" value="Search" />
+    </form>
+    <h1></h1>
+    <div class="container"></div>
+  </body>
+  <script>
+    const input = document.querySelector('.input');
+    const submitBtn = document.querySelector('.submit');
+
+    async function init(symbol) {
+      try {
+        const key = 'LSKS6CKY50WZXK7F';
+        const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${key}`;
+
+        const res = await fetch(url);
+        const data = await res.json();
+
+        const dailyTimeSeries = Object.entries(data['Time Series (Daily)']);
+
+        dailyTimeSeries.forEach((element) => {
+          const container = document.querySelector('.container');
+          const item = document.createElement('p');
+          const dataDate = element[0];
+          const moreData = Object.entries(element[1]);
+          item.innerText = dataDate + ' | ' + moreData;
+
+          container.appendChild(item);
+        });
+
+        console.log(dailyTimeSeries);
+
+        console.log(data);
+
+        document.querySelector('h1').innerText = data['Meta Data']['2. Symbol'];
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      init(input.value);
+      input.value = '';
+    });
+  </script>
+</html>

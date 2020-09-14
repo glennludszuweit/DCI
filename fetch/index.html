@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Corona Data</title>
+  </head>
+  <body>
+    <form>
+      <input class="input" type="text" placeholder="Search Country" />
+      <input class="submit" type="submit" value="Search" />
+    </form>
+    <h1 class="country"></h1>
+    <div class="confirmed"></div>
+    <div class="critical"></div>
+    <div class="deaths"></div>
+  </body>
+  <script>
+    const input = document.querySelector('.input');
+    const submitBtn = document.querySelector('.submit');
+
+    async function init(country) {
+      try {
+        // const country = prompt('Which Country?');
+        const key = '5da1418055mshf7d4c8017695c77p1da792jsn92609bedb479';
+        const url = `https://covid19-api.com/country?name=${country}&format=json`;
+
+        const res = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'x-rapidapi-host': 'covid-19-data.p.rapidapi.com',
+            'x-rapidapi-key': key,
+          },
+        });
+
+        const data = await res.json();
+
+        document.querySelector(
+          '.country'
+        ).textContent = `Country: ${data[0].country}`;
+        document.querySelector(
+          '.confirmed'
+        ).textContent = `Confirmed cases: ${data[0].confirmed}`;
+        document.querySelector(
+          '.critical'
+        ).textContent = `Critical cases: ${data[0].critical}`;
+        document.querySelector(
+          '.deaths'
+        ).textContent = `Death cases: ${data[0].deaths}`;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      init(input.value);
+      input.value = '';
+    });
+
+    document.addEventListener('DOMContentLoaded', init('Germany'));
+  </script>
+</html>

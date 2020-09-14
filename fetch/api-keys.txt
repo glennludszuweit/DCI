@@ -1,0 +1,3 @@
+alphavantage = LSKS6CKY50WZXK7F
+
+rapidapi = 5da1418055mshf7d4c8017695c77p1da792jsn92609bedb479
